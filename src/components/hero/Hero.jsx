@@ -7,12 +7,12 @@ import bgVdo from "../../assets/bg.mp4";
 export default function Hero() {
   return (
     <main
-      className="pl-24 pt-20 justify-between flex items-center"
+      className=" md:pl-32 px-5 md:pt-20 pt-8 flex flex-col justify-between items-center md:flex-row bg-cover"
       style={{
         backgroundImage: `url(${background})`,
       }}
     >
-      <div className="inline-flex flex-col gap-16">
+      <div className="inline-flex flex-col md:gap-16 gap-4">
         <div className="">
           <div className="inline-flex gap-1 border-2 rounded-3xl px-2 py-1 border-text">
             <p className="text-text font-bricolage text-xs font-extrabold">
@@ -23,26 +23,26 @@ export default function Hero() {
               alt="Four-pointed star representing the series rating"
             />
           </div>
-          <h1 className="text-desktop/large/h font-markot text-white py-6">
+          <h1 className=" md:text-desktop/large/h text-mobile/h1 font-markot text-white md:py-6 py-4">
             A80
           </h1>
-          <p className="text-base text-white uppercase font-markot font-medium">
-            6.7" punch hole Display with 120Hz refresh rate <br />| 50MP camera
+          <p className="md:text-base text-sm text-white uppercase font-markot font-medium">
+            6.7" punch hole Display with 120Hz refresh rate <br className="md:flex hidden"/>| 50MP camera
             | Up to 128GB + 8GB* Storage
           </p>
         </div>
         <div className="flex flex-col gap-4">
-          <p className="text-xl text-white font-markot">
-            Available at ₹<span className="font-bold">7,999/-</span>
+          <p className="md:text-xl text-sm text-white font-markot">
+            Available at  <span className="font-bold text-xl">₹7,999/-</span>
           </p>
-          <Button className="text-desktop/button font-extrabold">
+          <Button className="uppercase font-markot text-desktop/button font-extrabold " hidden>
             Buy Now
           </Button>
         </div>
       </div>
       <div className="relative">
         <video
-          className="absolute bottom-0 right-8 w-full h-full object-cover mix-blend-lighten "
+          className="absolute bottom-0 md:right-8 w-full h-full object-cover mix-blend-lighten "
           src={bgVdo}
           autoPlay
           loop
